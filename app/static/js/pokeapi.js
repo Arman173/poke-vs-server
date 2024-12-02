@@ -27,10 +27,11 @@ async function loadPokemon(onSuccess) {
 // Enviar los datos al endpoint
 battleForm.addEventListener('submit', async (event) => {
   event.preventDefault();
+  
   const pkm1 = pokemon1Select.value;
   const pkm2 = pokemon2Select.value;
 
-  if (pokemon1 === pokemon2) {
+  if (pkm1 === pkm2) {
     alert('Por favor, selecciona dos Pokémon diferentes.');
     return;
   }
@@ -48,14 +49,26 @@ battleForm.addEventListener('submit', async (event) => {
     });
 
     if (response.ok) {
-      alert('Datos enviados exitosamente.');
+      const responseData = await response.json(); // Leer el JSON de la respuesta
+      console.log('Respuesta recibida:', responseData);
+      updateWinner(responseData.received_data.winner)
+
+      // Muestra el resultado de la batalla en la interfaz
+      // alert(`Ganador: ${responseData}`);
     } else {
-      alert('Error al enviar los datos.');
+      const errorMessage = await response.text();
+      console.error('Error en la respuesta del servidor:', errorMessage);
+      alert('Error al procesar la solicitud en el servidor.');
     }
   } catch (error) {
     console.error('Error al enviar los datos:', error);
+    alert('Hubo un problema al conectar con el servidor.');
   }
 });
+
+function updateWinner(name) {
+  console.log(name);
+}
 
 function onPokemonSelectedChange() {}
 
