@@ -27,19 +27,19 @@ async function loadPokemon(onSuccess) {
 // Enviar los datos al endpoint
 battleForm.addEventListener('submit', async (event) => {
   event.preventDefault();
-  const pokemon1 = pokemon1Select.value;
-  const pokemon2 = pokemon2Select.value;
+  const pkm1 = pokemon1Select.value;
+  const pkm2 = pokemon2Select.value;
 
   if (pokemon1 === pokemon2) {
     alert('Por favor, selecciona dos Pokémon diferentes.');
     return;
   }
 
-  const payload = { pokemon1, pokemon2 };
+  const payload = { pkm1, pkm2 };
   console.log('Enviando datos:', payload);
 
   try {
-    const response = await fetch('https://tu-endpoint.com/battle', { // Cambia esta URL por tu endpoint real
+    const response = await fetch('/combat', { // Cambia esta URL por tu endpoint real
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
