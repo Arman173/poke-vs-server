@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tests</title>
+</head>
+<body>
+
+    <h1>Selecciona tu fruta favorita</h1>
+    <select id="frutas" name="frutas">
+        <option value="" disabled selected>Elige una fruta</option>
+        <option value="manzana">Manzana</option>
+        <option value="banana">Banana</option>
+        <option value="cereza">Cereza</option>
+        <option value="mango">Mango</option>
+        <option value="piña">Piña</option>
+    </select>
+
+    <script src="{{ url_for('static', filename='js/tests.js') }}"></script>
+</body>
+</html>

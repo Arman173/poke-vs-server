@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h1>¡Hola desde Flask!</h1>
+    <h1>Combate Pokémon</h1>
+  <p>Selecciona dos Pokémon para el combate:</p>
+  <form id="battleForm">
+    <label for="pokemon1">Pokémon 1:</label>
+    <select id="pokemon1" required>
+      <option value="" disabled selected>Selecciona un Pokémon</option>
+    </select>
+
+    <label for="pokemon2">Pokémon 2:</label>
+    <select id="pokemon2" required>
+      <option value="" disabled selected>Selecciona un Pokémon</option>
+    </select>
+
+    <br>
+    <button type="submit">Iniciar Combate</button>
+  </form>
+
+  <script src="{{ url_for('static', filename='js/pokeapi.js') }}"></script>
 </body>
 </html>
