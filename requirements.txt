@@ -1,0 +1,7 @@
+Flask==2.2.2
+gunicorn==20.1.0
+# Aquí agregas otras dependencias que tu proyecto use
+tensorflow
+marshmallow
+pandas
+numpy

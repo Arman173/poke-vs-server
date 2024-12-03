@@ -24,6 +24,20 @@
     <button type="submit">Iniciar Combate</button>
   </form>
 
+  <!-- Contenedor para mostrar el ganador -->
+  <div id="winner-info" style="display: none;">
+      <h2>¡El ganador es <span id="winner-name"></span>!</h2>
+      <img id="winner-image" src="" alt="Imagen del ganador" width="200">
+      <ul id="winner-stats">
+          <li><strong>HP:</strong> <span id="winner-hp"></span></li>
+          <li><strong>Attack:</strong> <span id="winner-attack"></span></li>
+          <li><strong>Defense:</strong> <span id="winner-defense"></span></li>
+          <li><strong>Sp. Atk:</strong> <span id="winner-spatk"></span></li>
+          <li><strong>Sp. Def:</strong> <span id="winner-spdef"></span></li>
+          <li><strong>Speed:</strong> <span id="winner-speed"></span></li>
+      </ul>
+  </div>
+
   <script src="{{ url_for('static', filename='js/pokeapi.js') }}"></script>
 </body>
 </html>

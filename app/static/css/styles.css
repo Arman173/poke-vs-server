@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
@@ -7,4 +7,103 @@ body {
     margin: 10px;
     padding: 10px;
     font-size: 16px;
-  }
+  } */
+
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Estilos del formulario */
+form {
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+form label {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+form select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+form button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+form button:hover {
+  background-color: #45a049;
+}
+
+/* Estilos de la sección del ganador */
+#winner-stats {
+  list-style: none;
+}
+#winner-info {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  max-width: 500px;
+  text-align: center;
+}
+
+#winner-info h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+#winner-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#winner-image {
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+#winner-name {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #4CAF50;
+}
+
+#winner-info p {
+  font-size: 18px;
+  margin: 5px 0;
+  color: #555;
+}
+
+#winner-info p strong {
+  color: #333;
+}
+
